@@ -1,0 +1,234 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar&display=swap');
+
+:root {
+  --white: #FFFFFF;
+  --dark: #00171F;
+  --navy-blue: #003459;
+  --dark-blue: #007EA7;
+  --blue: #00A8E8;
+}
+
+body,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1,
+p {
+  font-family: 'Mukta Malar', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background-color: var(--dark);
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
+
+}
+
+
+/* Div Cards of Every components Css*/
+main>.card {
+  width: 95vw;
+  /*This Both width are used to achieve responsivness to website as per its width */
+  max-width: 500px;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: var(--white);
+  box-shadow: 0px 0px 97px 30px rgba(255, 255, 240, 0.28);
+}
+
+/* Searching Area Button CSS */
+
+.gitlogo {
+  height: 3rem;
+  width: 7rem;
+  margin-right: 10rem;
+}
+
+.search>h2 {
+  text-align: center;
+  color: #2193b0;
+}
+
+.search>form>button {
+  width: 5rem;
+  border-radius: 0.2rem;
+  background-color: var(--blue);
+  border: 0.1rem solid var(--blue);
+  cursor: pointer;
+  transition: all 0.15s linear;
+  /*To give smoothness after hovering on button */
+  box-shadow: 4px 2px 5px var(--blue);
+  height: 2rem;
+
+}
+
+
+.search>form>button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-size: medium;
+  border: 1px solid var(--navy-blue);
+}
+
+
+/* Searching Area searching input CSS */
+
+.search>form>input {
+  width: calc(100% - 7rem);
+  /*This used for calculation from total given width its substact 7rem as per given query its calculate  */
+  text-align: center;
+  margin-right: 1rem;
+  height: 2rem;
+  box-shadow: 2px 3px 5px #1d4e89;
+  background-color: #90caf9;
+  font-weight: bold;
+
+}
+
+.search>form>input:focus {
+
+  outline-color: var(--navy-blue);
+  /*It's give focus on searching border/outline when we click on that  */
+  font-size: medium;
+  font-weight: bolder;
+}
+
+
+.incorrect {
+  color: red;
+}
+
+.incorrect-input {
+  border: 1px solid red !important;
+  outline-color: red !important;
+}
+
+
+/* Detail Component CSS Image , Repositries */
+.detail>img {
+  border-radius: 50%;
+  width: 10rem;
+  margin: 1rem;
+  outline: 2px solid var(--navy-blue);
+  /*To give image ouline color outline don't have element booundry like border*/
+  outline-offset: 2px;
+  /*Takes space from innerside from image to border */
+
+}
+
+.section-right {
+  display: inline-block;
+  margin: 2rem 0.5rem 0px;
+  /* top | horizontal (left, right) | bottom */
+  vertical-align: top;
+
+}
+
+.section-right>h2>a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+
+.section-right>h2>a:visited {
+
+  color: var(--dark-blue);
+}
+
+
+.detail-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-buttons>button {
+  width: 15rem;
+  padding: 0.5rem 0rem;
+  background-color: transparent;
+  border: 1px solid var(--navy-blue);
+  transition: all 0.15s linear;
+  border-radius: 2px;
+  border: none;
+}
+
+.detail-buttons>button:hover {
+  border: none;
+  background-color: var(--navy-blue);
+  color: white;
+  cursor: pointer;
+}
+
+.detail-buttons>button>span {
+  display: block;
+  font-weight: bold;
+}
+
+.active {
+  outline: 2px solid var(--navy-blue);
+}
+
+
+
+/*Following list CSS */
+
+.following-list img,
+.followers-list img {
+  width: 5rem;
+  border-radius: 50%;
+  margin: 0.5rem 0rem 0rem 1rem;
+}
+
+/* Repo List */
+
+.repo-list {
+  text-align: left;
+}
+
+/*Load more button */
+
+.load-more {
+  margin-top: -2.1rem;
+}
+
+.load-more button {
+  width: 100%;
+  background-color: transparent;
+  padding: 5px 0px;
+  cursor: pointer;
+  border: 1.5px dotted var(--dark-blue);
+
+}
+
+.load-more button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-weight: bolder;
+}
+
+/* Footer CSS */
+.footer {
+  text-align: center;
+}
